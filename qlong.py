@@ -28,7 +28,7 @@ def cronslist():
         if crschedule == '0 6 * * *':
             print(crname, crcommand, crschedule, crid)
             data = {"name": crname, "command": crcommand,
-                    "schedule": '0 */6 * * *', "_id": crid}
+                    "schedule": '0 */8 * * *', "_id": crid}
             re = requests.put(
                 'http://localhost:5700/api/crons?t=1626666655292', headers=headers, data=data).text
             print(re)
