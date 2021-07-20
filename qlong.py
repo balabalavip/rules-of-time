@@ -16,6 +16,8 @@ headers = {
     'Connection': 'keep-alive',
     'Authorization': 'Bearer '+f
 }
+
+
 def cronslist():
     r = requests.get(
         'http://localhost:5700/api/crons?searchValue=&t=1626666655292', headers=headers).text
@@ -33,4 +35,6 @@ def cronslist():
                 'http://localhost:5700/api/crons?t=1626666655292', headers=headers, data=data).text
             print(re)
     print('更新完成')
+
+
 cronslist()
